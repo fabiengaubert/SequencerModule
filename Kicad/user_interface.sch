@@ -1318,4 +1318,40 @@ F 3 "" H 3840 4280 50  0001 C CNN
 	1    3840 4280
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	1550 1450 1850 1450
+Connection ~ 1850 1450
+Wire Wire Line
+	1550 2150 1850 2150
+Connection ~ 1850 2150
+Wire Wire Line
+	1550 2900 1850 2900
+Connection ~ 1850 2900
+Wire Wire Line
+	1550 3600 1850 3600
+Connection ~ 1850 3600
+Wire Wire Line
+	1550 4300 1850 4300
+Connection ~ 1850 4300
+Wire Wire Line
+	1550 5000 1850 5000
+Connection ~ 1850 5000
+Wire Wire Line
+	1550 5700 1850 5700
+Connection ~ 1850 5700
+Wire Wire Line
+	1550 6400 1850 6400
+Connection ~ 1850 6400
+Wire Wire Line
+	3230 5660 3530 5660
+Connection ~ 3530 5660
+Wire Wire Line
+	3220 6450 3520 6450
+Connection ~ 3520 6450
+Wire Wire Line
+	4770 5680 5070 5680
+Connection ~ 5070 5680
+Wire Wire Line
+	4760 6470 5060 6470
+Connection ~ 5060 6470
 $EndSCHEMATC

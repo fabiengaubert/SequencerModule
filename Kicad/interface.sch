@@ -1045,7 +1045,6 @@ Text GLabel 9130 1820 2    50   Input ~ 0
 SW14
 Text GLabel 9130 1920 2    50   Input ~ 0
 SW15
-NoConn ~ 9130 2020
 $Comp
 L power:+5V #PWR?
 U 1 1 5FDBCD39
@@ -1165,17 +1164,9 @@ F 3 "" H 4720 6240 50  0001 C CNN
 $EndComp
 Connection ~ 4720 6240
 Wire Wire Line
-	5910 1810 5290 1810
-Wire Wire Line
-	5290 1810 5290 2230
-Wire Wire Line
 	5290 2230 8090 2230
-Wire Wire Line
-	8090 2230 8090 1920
-Wire Wire Line
-	8090 1920 8230 1920
-Text HLabel 5910 1910 0    50   Input ~ 0
-SHIFT_REG_IN
+Text HLabel 5910 1810 0    50   Input ~ 0
+SHIFT_REG_OUT
 NoConn ~ 8230 1720
 NoConn ~ 5910 1710
 Text HLabel 5910 1610 0    50   Input ~ 0
@@ -1225,5 +1216,53 @@ F 2 "" H 6590 3740 50  0001 C CNN
 F 3 "" H 6590 3740 50  0001 C CNN
 	1    6590 3740
 	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FC8F2A6
+P 5910 1410
+F 0 "#PWR?" H 5910 1160 50  0001 C CNN
+F 1 "GND" H 5915 1237 50  0000 C CNN
+F 2 "" H 5910 1410 50  0001 C CNN
+F 3 "" H 5910 1410 50  0001 C CNN
+	1    5910 1410
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FC8F7EA
+P 8230 1420
+F 0 "#PWR?" H 8230 1170 50  0001 C CNN
+F 1 "GND" H 8235 1247 50  0000 C CNN
+F 2 "" H 8230 1420 50  0001 C CNN
+F 3 "" H 8230 1420 50  0001 C CNN
+	1    8230 1420
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5290 2230 5290 1910
+Wire Wire Line
+	5290 1910 5910 1910
+Wire Wire Line
+	8090 1820 8230 1820
+Wire Wire Line
+	8090 1820 8090 2230
+Wire Wire Line
+	8230 1920 8230 2020
+Connection ~ 8230 2020
+Text HLabel 5910 1510 0    50   Input ~ 0
+SHIFT_REG_LD
+Text HLabel 8230 1520 0    50   Input ~ 0
+SHIFT_REG_LD
+$Comp
+L power:GND #PWR?
+U 1 1 5FCB16CE
+P 9130 2020
+F 0 "#PWR?" H 9130 1770 50  0001 C CNN
+F 1 "GND" H 9135 1847 50  0000 C CNN
+F 2 "" H 9130 2020 50  0001 C CNN
+F 3 "" H 9130 2020 50  0001 C CNN
+	1    9130 2020
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

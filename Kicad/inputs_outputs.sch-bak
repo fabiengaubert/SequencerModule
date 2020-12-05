@@ -1019,4 +1019,10 @@ Wire Notes Line
 	720  4950 720  1260
 Text Notes 720  1260 0    50   ~ 0
 Triggers/Gates inputs
+NoConn ~ 10070 1170
+NoConn ~ 10070 2960
+NoConn ~ 7110 3420
+NoConn ~ 7060 5270
+NoConn ~ 1580 3910
+NoConn ~ 1580 2220
 $EndSCHEMATC

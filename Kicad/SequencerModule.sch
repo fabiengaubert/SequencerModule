@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title "Eurorack sequencer module"
 Date "2020-11-30"
 Rev "v0.0"
@@ -25,77 +25,6 @@ F5 "MCU_TRIG_OUT_2" I L 10160 1470 50
 F6 "MCU_CLOCK_IN" O L 10160 1600 50 
 F7 "MCU_RESET_IN" O L 10160 1730 50 
 $EndSheet
-$Comp
-L Analog_DAC:MCP4822 U2
-U 1 1 5FAC40C6
-P 2180 2190
-F 0 "U2" H 2480 2790 50  0000 C CNN
-F 1 "MCP4822" H 2530 2690 50  0000 C CNN
-F 2 "" H 2980 1890 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf" H 2980 1890 50  0001 C CNN
-	1    2180 2190
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 5FAC5967
-P 2180 2690
-F 0 "#PWR0101" H 2180 2440 50  0001 C CNN
-F 1 "GND" H 2185 2517 50  0000 C CNN
-F 2 "" H 2180 2690 50  0001 C CNN
-F 3 "" H 2180 2690 50  0001 C CNN
-	1    2180 2690
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C1
-U 1 1 5FAC8AF5
-P 1880 1690
-F 0 "C1" V 2109 1690 50  0000 C CNN
-F 1 "0.1μF" V 2018 1690 50  0000 C CNN
-F 2 "" H 1880 1690 50  0001 C CNN
-F 3 "~" H 1880 1690 50  0001 C CNN
-	1    1880 1690
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2180 1590 2180 1690
-Wire Wire Line
-	1980 1690 2180 1690
-Connection ~ 2180 1690
-Wire Wire Line
-	2180 1690 2180 1790
-$Comp
-L power:GND #PWR0102
-U 1 1 5FAC9D1B
-P 1630 1690
-F 0 "#PWR0102" H 1630 1440 50  0001 C CNN
-F 1 "GND" H 1635 1517 50  0000 C CNN
-F 2 "" H 1630 1690 50  0001 C CNN
-F 3 "" H 1630 1690 50  0001 C CNN
-	1    1630 1690
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1630 1690 1780 1690
-Text GLabel 1480 2090 0    50   Input ~ 0
-SCLK
-Text GLabel 1430 2390 0    50   Input ~ 0
-CS
-Text GLabel 2680 2090 2    50   Input ~ 0
-DAC_CV1
-Text GLabel 2680 2390 2    50   Input ~ 0
-DAC_CV2
-Wire Wire Line
-	1480 2090 1680 2090
-Wire Wire Line
-	1480 2190 1680 2190
-Wire Wire Line
-	1430 2290 1680 2290
-Wire Wire Line
-	1430 2390 1680 2390
-Text GLabel 1430 2290 0    50   Input ~ 0
-SDI
 $Comp
 L Device:D_Small D2
 U 1 1 5FB17EBE
@@ -311,17 +240,6 @@ Wire Wire Line
 	4850 6500 4850 6600
 Connection ~ 4850 6600
 $Comp
-L power:+5V #PWR0110
-U 1 1 5FB4B6EF
-P 2180 1590
-F 0 "#PWR0110" H 2180 1440 50  0001 C CNN
-F 1 "+5V" H 2195 1763 50  0000 C CNN
-F 2 "" H 2180 1590 50  0001 C CNN
-F 3 "" H 2180 1590 50  0001 C CNN
-	1    2180 1590
-	1    0    0    -1  
-$EndComp
-$Comp
 L eurorack_custom:urorack_EURO_PWR_2x5 JP1
 U 1 1 5FBBE1F9
 P 2000 6750
@@ -429,8 +347,6 @@ Wire Wire Line
 	10090 2620 10160 2620
 Wire Wire Line
 	10090 2770 10160 2770
-Text GLabel 1480 2190 0    50   Input ~ 0
-LDAC
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5FE27D66
@@ -498,12 +414,66 @@ Connection ~ 2450 6400
 $Comp
 L MCU_ST_STM32F4:STM32F401RBTx U?
 U 1 1 5FCBFD96
-P 5850 3370
-F 0 "U?" H 6310 5160 50  0000 C CNN
-F 1 "STM32F401RBT6" H 6480 5070 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5250 1670 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00086815.pdf" H 5850 3370 50  0001 C CNN
-	1    5850 3370
+P 5610 3240
+F 0 "U?" H 6070 5030 50  0000 C CNN
+F 1 "STM32F401RBT6" H 6240 4940 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5010 1540 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00086815.pdf" H 5610 3240 50  0001 C CNN
+	1    5610 3240
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 10160 3600 860  570 
+U 5FE50EBA
+F0 "Control interface" 50
+F1 "control_interface.sch" 50
+$EndSheet
+$Comp
+L power:GND #PWR?
+U 1 1 5FD65173
+P 5560 5040
+F 0 "#PWR?" H 5560 4790 50  0001 C CNN
+F 1 "GND" H 5565 4867 50  0000 C CNN
+F 2 "" H 5560 5040 50  0001 C CNN
+F 3 "" H 5560 5040 50  0001 C CNN
+	1    5560 5040
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5410 5040 5510 5040
+Connection ~ 5510 5040
+Wire Wire Line
+	5510 5040 5560 5040
+Connection ~ 5610 5040
+Wire Wire Line
+	5610 5040 5710 5040
+Connection ~ 5560 5040
+Wire Wire Line
+	5560 5040 5610 5040
+$Comp
+L Device:C_Small C?
+U 1 1 5FD67219
+P 4790 2380
+F 0 "C?" H 4870 2440 50  0000 L CNN
+F 1 "10nF" H 4810 2310 50  0000 L CNN
+F 2 "" H 4790 2380 50  0001 C CNN
+F 3 "~" H 4790 2380 50  0001 C CNN
+	1    4790 2380
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4790 2280 4790 2240
+Wire Wire Line
+	4790 2240 4910 2240
+$Comp
+L power:GND #PWR?
+U 1 1 5FD68F2E
+P 4790 2480
+F 0 "#PWR?" H 4790 2230 50  0001 C CNN
+F 1 "GND" H 4795 2307 50  0000 C CNN
+F 2 "" H 4790 2480 50  0001 C CNN
+F 3 "" H 4790 2480 50  0001 C CNN
+	1    4790 2480
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

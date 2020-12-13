@@ -1,0 +1,680 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title "Eurorack sequencer module"
+Date "2020-11-30"
+Rev "v0.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 10160 1000 860  880 
+U 5FC4E204
+F0 "Inputs/Outputs" 50
+F1 "inputs_outputs.sch" 50
+F2 "DAC_1" I L 10160 1110 50 
+F3 "DAC_2" I L 10160 1230 50 
+F4 "MCU_TRIG_OUT_1" I L 10160 1350 50 
+F5 "MCU_TRIG_OUT_2" I L 10160 1470 50 
+F6 "MCU_CLOCK_IN" O L 10160 1600 50 
+F7 "MCU_RESET_IN" O L 10160 1730 50 
+$EndSheet
+$Comp
+L Device:D_Small D2
+U 1 1 5FB17EBE
+P 1860 6430
+F 0 "D2" H 1870 6320 50  0000 C CNN
+F 1 "D_Small" H 1860 6314 50  0001 C CNN
+F 2 "" V 1860 6430 50  0001 C CNN
+F 3 "~" V 1860 6430 50  0001 C CNN
+	1    1860 6430
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Small D1
+U 1 1 5FB182A9
+P 1850 7130
+F 0 "D1" H 1850 7020 50  0000 C CNN
+F 1 "D_Small" H 1850 6880 50  0001 C CNN
+F 2 "" V 1850 7130 50  0001 C CNN
+F 3 "~" V 1850 7130 50  0001 C CNN
+	1    1850 7130
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1960 6430 1970 6430
+Wire Wire Line
+	1950 7130 2020 7130
+$Comp
+L power:+12V #PWR0104
+U 1 1 5FB1BF0F
+P 2510 6380
+F 0 "#PWR0104" H 2510 6230 50  0001 C CNN
+F 1 "+12V" H 2600 6520 50  0000 C CNN
+F 2 "" H 2510 6380 50  0001 C CNN
+F 3 "" H 2510 6380 50  0001 C CNN
+	1    2510 6380
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0105
+U 1 1 5FB1C764
+P 2510 7180
+F 0 "#PWR0105" H 2510 7280 50  0001 C CNN
+F 1 "-12V" H 2525 7353 50  0000 C CNN
+F 2 "" H 2510 7180 50  0001 C CNN
+F 3 "" H 2510 7180 50  0001 C CNN
+	1    2510 7180
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 6430 2360 6430
+Wire Wire Line
+	2510 6430 2510 6380
+Wire Wire Line
+	2220 7130 2360 7130
+Wire Wire Line
+	2510 7130 2510 7180
+$Comp
+L Device:CP1_Small C2
+U 1 1 5FB1EE02
+P 2510 6580
+F 0 "C2" H 2601 6626 50  0000 L CNN
+F 1 "22uF" H 2601 6535 50  0000 L CNN
+F 2 "" H 2510 6580 50  0001 C CNN
+F 3 "~" H 2510 6580 50  0001 C CNN
+	1    2510 6580
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1710 6580 1710 6430
+Wire Wire Line
+	1710 6430 1760 6430
+Wire Wire Line
+	1710 6980 1710 7130
+Wire Wire Line
+	1710 7130 1750 7130
+$Comp
+L Device:CP1_Small C3
+U 1 1 5FB2C619
+P 2510 6980
+F 0 "C3" H 2601 7026 50  0000 L CNN
+F 1 "22uF" H 2601 6935 50  0000 L CNN
+F 2 "" H 2510 6980 50  0001 C CNN
+F 3 "~" H 2510 6980 50  0001 C CNN
+	1    2510 6980
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2510 6480 2510 6430
+Connection ~ 2510 6430
+Wire Wire Line
+	2510 6680 2510 6780
+Wire Wire Line
+	2510 7080 2510 7130
+Connection ~ 2510 7130
+Wire Wire Line
+	1710 6780 2040 6780
+Connection ~ 2510 6780
+Wire Wire Line
+	2510 6780 2510 6880
+Wire Wire Line
+	1710 6680 1710 6780
+Connection ~ 1710 6780
+Wire Wire Line
+	1710 6880 1710 6780
+$Comp
+L power:GND #PWR0106
+U 1 1 5FB35744
+P 700 6830
+F 0 "#PWR0106" H 700 6580 50  0001 C CNN
+F 1 "GND" H 705 6657 50  0000 C CNN
+F 2 "" H 700 6830 50  0001 C CNN
+F 3 "" H 700 6830 50  0001 C CNN
+	1    700  6830
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	700  6830 700  6780
+$Comp
+L power:GND #PWR0108
+U 1 1 5FB3FD51
+P 5620 7190
+F 0 "#PWR0108" H 5620 6940 50  0001 C CNN
+F 1 "GND" H 5625 7017 50  0000 C CNN
+F 2 "" H 5620 7190 50  0001 C CNN
+F 3 "" H 5620 7190 50  0001 C CNN
+	1    5620 7190
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5620 7040 5620 7090
+$Comp
+L Device:C_Small C4
+U 1 1 5FB44E32
+P 6020 6890
+F 0 "C4" H 5890 6960 50  0000 L CNN
+F 1 "0.1uF" H 5810 6790 50  0000 L CNN
+F 2 "" H 6020 6890 50  0001 C CNN
+F 3 "~" H 6020 6890 50  0001 C CNN
+	1    6020 6890
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6020 6990 6020 7090
+Wire Wire Line
+	6020 7090 5620 7090
+Connection ~ 5620 7090
+Wire Wire Line
+	5620 7090 5620 7190
+Wire Wire Line
+	5920 6740 6020 6740
+Wire Wire Line
+	6020 6740 6020 6790
+$Comp
+L eurorack_custom:urorack_EURO_PWR_2x5 JP1
+U 1 1 5FBBE1F9
+P 1260 6780
+F 0 "JP1" H 1480 7280 60  0000 C CNN
+F 1 "EURO_PWR_2x5" H 1400 7370 60  0000 C CNN
+F 2 "" H 1260 6780 60  0000 C CNN
+F 3 "" H 1260 6780 60  0000 C CNN
+	1    1260 6780
+	1    0    0    -1  
+$EndComp
+Connection ~ 810  6780
+Wire Wire Line
+	810  6680 810  6780
+Wire Wire Line
+	810  6780 810  6880
+Wire Notes Line
+	590  7600 590  5950
+Text Notes 590  5950 0    59   ~ 0
+Power
+Text GLabel 10090 1110 0    50   Input ~ 0
+DAC_CV1
+$Comp
+L Amplifier_Operational:TL072 U4
+U 3 1 5FCC2A10
+P 6700 6860
+F 0 "U4" H 6650 6910 50  0000 L CNN
+F 1 "TL072" H 6640 6790 50  0000 L CNN
+F 2 "" H 6700 6860 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6700 6860 50  0001 C CNN
+	3    6700 6860
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR024
+U 1 1 5FCCE68E
+P 6600 7250
+F 0 "#PWR024" H 6600 7350 50  0001 C CNN
+F 1 "-12V" H 6615 7423 50  0000 C CNN
+F 2 "" H 6600 7250 50  0001 C CNN
+F 3 "" H 6600 7250 50  0001 C CNN
+	1    6600 7250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR023
+U 1 1 5FCCECB0
+P 6600 6460
+F 0 "#PWR023" H 6600 6310 50  0001 C CNN
+F 1 "+12V" H 6615 6633 50  0000 C CNN
+F 2 "" H 6600 6460 50  0001 C CNN
+F 3 "" H 6600 6460 50  0001 C CNN
+	1    6600 6460
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 6460 6600 6560
+Wire Wire Line
+	6600 7250 6600 7160
+Text GLabel 10090 1230 0    50   Input ~ 0
+DAC_CV2
+Wire Wire Line
+	10090 1110 10160 1110
+Wire Wire Line
+	10090 1230 10160 1230
+Text GLabel 10090 1350 0    50   Input ~ 0
+MCU_TRIG_1
+Text GLabel 10090 1470 0    50   Input ~ 0
+MCU_TRIG_1
+Wire Wire Line
+	10090 1350 10160 1350
+Wire Wire Line
+	10090 1470 10160 1470
+$Sheet
+S 10160 2370 860  740 
+U 5FC5188F
+F0 "User interface" 50
+F1 "user_interface.sch" 50
+F2 "SHIFT_REG_OUT" O L 10160 2480 50 
+F3 "SHIFT_REG_CLK" I L 10160 2620 50 
+F4 "SHIFT_REG_LD" I L 10160 2770 50 
+$EndSheet
+Text GLabel 10090 1600 0    50   Input ~ 0
+MCU_CLOCK_IN
+Wire Wire Line
+	10090 1600 10160 1600
+Text GLabel 10090 1730 0    50   Input ~ 0
+MCU_RESET_IN
+Wire Wire Line
+	10090 1730 10160 1730
+Text GLabel 10090 2480 0    50   Input ~ 0
+MCU_SHIFT_REG_OUT
+Text GLabel 10090 2620 0    50   Input ~ 0
+MCU_SHIFT_REG_CLK
+Text GLabel 10090 2770 0    50   Input ~ 0
+MCU_SHIFT_REG_LD
+Wire Wire Line
+	10090 2480 10160 2480
+Wire Wire Line
+	10090 2620 10160 2620
+Wire Wire Line
+	10090 2770 10160 2770
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FE2804E
+P 2360 7130
+F 0 "#FLG0102" H 2360 7205 50  0001 C CNN
+F 1 "PWR_FLAG" H 2470 7270 39  0000 C CNN
+F 2 "" H 2360 7130 50  0001 C CNN
+F 3 "~" H 2360 7130 50  0001 C CNN
+	1    2360 7130
+	-1   0    0    1   
+$EndComp
+Connection ~ 1710 7130
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5FE2932A
+P 2040 6780
+F 0 "#FLG0103" H 2040 6855 50  0001 C CNN
+F 1 "PWR_FLAG" H 2040 6730 39  0000 C CNN
+F 2 "" H 2040 6780 50  0001 C CNN
+F 3 "~" H 2040 6780 50  0001 C CNN
+	1    2040 6780
+	-1   0    0    1   
+$EndComp
+Connection ~ 2040 6780
+Wire Wire Line
+	2040 6780 2510 6780
+Wire Wire Line
+	700  6780 810  6780
+Wire Wire Line
+	810  6880 1710 6880
+Connection ~ 810  6880
+Connection ~ 1710 6880
+Wire Wire Line
+	810  6680 1710 6680
+Connection ~ 810  6680
+Connection ~ 1710 6680
+Wire Wire Line
+	810  6980 810  7130
+Wire Wire Line
+	810  7130 1710 7130
+Wire Wire Line
+	810  6580 810  6430
+Wire Wire Line
+	810  6780 1710 6780
+Connection ~ 2360 6430
+Wire Wire Line
+	2360 6430 2510 6430
+Connection ~ 2360 7130
+Wire Wire Line
+	2360 7130 2510 7130
+Wire Wire Line
+	810  6430 1710 6430
+Connection ~ 1710 6430
+$Comp
+L MCU_ST_STM32F4:STM32F401RBTx U?
+U 1 1 5FCBFD96
+P 5610 3240
+F 0 "U?" H 6070 5030 50  0000 C CNN
+F 1 "STM32F401RBT6" H 6240 4940 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5010 1540 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00086815.pdf" H 5610 3240 50  0001 C CNN
+	1    5610 3240
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 10160 3600 860  570 
+U 5FE50EBA
+F0 "Control interface" 50
+F1 "control_interface.sch" 50
+$EndSheet
+$Comp
+L power:GND #PWR?
+U 1 1 5FD65173
+P 5560 5040
+F 0 "#PWR?" H 5560 4790 50  0001 C CNN
+F 1 "GND" H 5565 4867 50  0000 C CNN
+F 2 "" H 5560 5040 50  0001 C CNN
+F 3 "" H 5560 5040 50  0001 C CNN
+	1    5560 5040
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5410 5040 5510 5040
+Connection ~ 5510 5040
+Wire Wire Line
+	5510 5040 5560 5040
+Connection ~ 5610 5040
+Wire Wire Line
+	5610 5040 5710 5040
+Connection ~ 5560 5040
+Wire Wire Line
+	5560 5040 5610 5040
+$Comp
+L Device:C_Small C?
+U 1 1 5FD67219
+P 4790 2380
+F 0 "C?" H 4870 2440 50  0000 L CNN
+F 1 "10nF" H 4810 2310 50  0000 L CNN
+F 2 "" H 4790 2380 50  0001 C CNN
+F 3 "~" H 4790 2380 50  0001 C CNN
+	1    4790 2380
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4790 2280 4790 2240
+Wire Wire Line
+	4790 2240 4910 2240
+$Comp
+L power:GND #PWR?
+U 1 1 5FD68F2E
+P 4790 2480
+F 0 "#PWR?" H 4790 2230 50  0001 C CNN
+F 1 "GND" H 4795 2307 50  0000 C CNN
+F 2 "" H 4790 2480 50  0001 C CNN
+F 3 "" H 4790 2480 50  0001 C CNN
+	1    4790 2480
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 5FD6D62E
+P 2100 6430
+F 0 "FB?" V 1960 6410 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 1954 6430 50  0001 C CNN
+F 2 "" V 2030 6430 50  0001 C CNN
+F 3 "~" H 2100 6430 50  0001 C CNN
+	1    2100 6430
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 5FD70C75
+P 2120 7130
+F 0 "FB?" V 1990 7080 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 1974 7130 50  0001 C CNN
+F 2 "" V 2050 7130 50  0001 C CNN
+F 3 "~" H 2120 7130 50  0001 C CNN
+	1    2120 7130
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5FD757D7
+P 4910 6890
+F 0 "C?" H 4930 6970 50  0000 L CNN
+F 1 "22uF" H 4940 6790 50  0000 L CNN
+F 2 "" H 4910 6890 50  0001 C CNN
+F 3 "~" H 4910 6890 50  0001 C CNN
+	1    4910 6890
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4910 6990 4910 7090
+Wire Wire Line
+	4910 7090 5280 7090
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FD786F7
+P 6250 6640
+F 0 "#PWR?" H 6250 6490 50  0001 C CNN
+F 1 "+3.3V" H 6265 6813 50  0000 C CNN
+F 2 "" H 6250 6640 50  0001 C CNN
+F 3 "" H 6250 6640 50  0001 C CNN
+	1    6250 6640
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 5FD79212
+P 6250 6890
+F 0 "C?" H 6300 6980 50  0000 L CNN
+F 1 "22uF" H 6280 6800 50  0000 L CNN
+F 2 "" H 6250 6890 50  0001 C CNN
+F 3 "~" H 6250 6890 50  0001 C CNN
+	1    6250 6890
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 6990 6250 7090
+Wire Wire Line
+	6250 7090 6020 7090
+Connection ~ 6020 7090
+Wire Wire Line
+	6250 6790 6250 6740
+Wire Wire Line
+	6250 6740 6020 6740
+Connection ~ 6020 6740
+Wire Wire Line
+	6250 6640 6250 6740
+Connection ~ 6250 6740
+Wire Wire Line
+	3180 6640 3180 6740
+Wire Wire Line
+	3180 6740 3340 6740
+$Comp
+L power:GND #PWR?
+U 1 1 5FDBBCBD
+P 3740 7190
+F 0 "#PWR?" H 3740 6940 50  0001 C CNN
+F 1 "GND" H 3745 7017 50  0000 C CNN
+F 2 "" H 3740 7190 50  0001 C CNN
+F 3 "" H 3740 7190 50  0001 C CNN
+	1    3740 7190
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3740 7040 3740 7090
+$Comp
+L Device:C_Small C?
+U 1 1 5FDBBCC8
+P 4240 6890
+F 0 "C?" H 4260 6980 50  0000 L CNN
+F 1 "0.1uF" H 4240 6780 50  0000 L CNN
+F 2 "" H 4240 6890 50  0001 C CNN
+F 3 "~" H 4240 6890 50  0001 C CNN
+	1    4240 6890
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4240 6990 4240 7090
+Wire Wire Line
+	4240 7090 3740 7090
+Connection ~ 3740 7090
+Wire Wire Line
+	3740 7090 3740 7190
+Wire Wire Line
+	4140 6740 4240 6740
+Wire Wire Line
+	4240 6740 4240 6790
+$Comp
+L Device:C_Small C?
+U 1 1 5FDBBCE2
+P 3180 6890
+F 0 "C?" H 2930 6940 50  0000 L CNN
+F 1 "0.1uF" H 2890 6840 50  0000 L CNN
+F 2 "" H 3180 6890 50  0001 C CNN
+F 3 "~" H 3180 6890 50  0001 C CNN
+	1    3180 6890
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3180 6790 3180 6740
+Connection ~ 3180 6740
+Wire Wire Line
+	3180 6990 3180 7090
+Wire Wire Line
+	3180 7090 3740 7090
+$Comp
+L Device:CP_Small C?
+U 1 1 5FDBBCFA
+P 4470 6890
+F 0 "C?" H 4520 6980 50  0000 L CNN
+F 1 "22uF" H 4490 6800 50  0000 L CNN
+F 2 "" H 4470 6890 50  0001 C CNN
+F 3 "~" H 4470 6890 50  0001 C CNN
+	1    4470 6890
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4470 6990 4470 7090
+Wire Wire Line
+	4470 7090 4240 7090
+Connection ~ 4240 7090
+Wire Wire Line
+	4470 6790 4470 6740
+Wire Wire Line
+	4470 6740 4240 6740
+Connection ~ 4240 6740
+Wire Wire Line
+	4470 6640 4470 6740
+Connection ~ 4470 6740
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 5FDC8CDB
+P 4470 6640
+F 0 "#PWR?" H 4470 6490 50  0001 C CNN
+F 1 "+3.3VA" H 4485 6813 50  0000 C CNN
+F 2 "" H 4470 6640 50  0001 C CNN
+F 3 "" H 4470 6640 50  0001 C CNN
+	1    4470 6640
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FE27D66
+P 2360 6430
+F 0 "#FLG0101" H 2360 6505 50  0001 C CNN
+F 1 "PWR_FLAG" H 2330 6570 39  0000 C CNN
+F 2 "" H 2360 6430 50  0001 C CNN
+F 3 "~" H 2360 6430 50  0001 C CNN
+	1    2360 6430
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 5FDE9F5E
+P 3180 6540
+F 0 "FB?" V 3040 6520 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 3034 6540 50  0001 C CNN
+F 2 "" V 3110 6540 50  0001 C CNN
+F 3 "~" H 3180 6540 50  0001 C CNN
+	1    3180 6540
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1970 6430 1970 6140
+Wire Wire Line
+	1970 6140 3180 6140
+Wire Wire Line
+	3180 6140 3180 6440
+Connection ~ 1970 6430
+Wire Wire Line
+	1970 6430 2000 6430
+Wire Notes Line
+	6900 5950 6900 7600
+Wire Notes Line
+	590  5950 6900 5950
+Wire Notes Line
+	590  7600 6900 7600
+$Comp
+L Regulator_Switching:R-78E3.3-0.5 U?
+U 1 1 5FE0B1C3
+P 5620 6740
+F 0 "U?" H 5620 6982 50  0000 C CNN
+F 1 "R-78E3.3-0.5" H 5620 6891 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT" H 5670 6490 50  0001 L CIN
+F 3 "https://www.recom-power.com/pdf/Innoline/R-78Exx-0.5.pdf" H 5620 6740 50  0001 C CNN
+	1    5620 6740
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Small L?
+U 1 1 5FE1BDD6
+P 5100 6740
+F 0 "L?" V 5285 6740 50  0000 C CNN
+F 1 "33uH" V 5194 6740 50  0000 C CNN
+F 2 "" H 5100 6740 50  0001 C CNN
+F 3 "~" H 5100 6740 50  0001 C CNN
+	1    5100 6740
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5000 6740 4910 6740
+Connection ~ 4910 6740
+Wire Wire Line
+	4910 6740 4910 6790
+Wire Wire Line
+	5200 6740 5280 6740
+$Comp
+L Device:C_Small C?
+U 1 1 5FE30D6E
+P 5280 6890
+F 0 "C?" H 5290 6970 50  0000 L CNN
+F 1 "22uF" H 5290 6780 50  0000 L CNN
+F 2 "" H 5280 6890 50  0001 C CNN
+F 3 "~" H 5280 6890 50  0001 C CNN
+	1    5280 6890
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5280 6790 5280 6740
+Connection ~ 5280 6740
+Wire Wire Line
+	5280 6740 5320 6740
+Wire Wire Line
+	5280 6990 5280 7090
+Connection ~ 5280 7090
+Wire Wire Line
+	5280 7090 5620 7090
+Wire Wire Line
+	4910 6140 3180 6140
+Wire Wire Line
+	4910 6140 4910 6740
+Connection ~ 3180 6140
+$Comp
+L eec:LD2981ABU33TR U?
+U 1 1 5FE41345
+P 3240 6740
+F 0 "U?" H 3740 7005 50  0000 C CNN
+F 1 "LD2981ABU33TR" H 3740 6914 50  0000 C CNN
+F 2 "STMicroelectronics-LD2981ABU33TR-*" H 3240 7140 50  0001 L CNN
+F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001635.pdf" H 3240 7240 50  0001 L CNN
+F 4 "Manufacturer URL" H 3240 7340 50  0001 L CNN "Component Link 1 Description"
+F 5 "http://www.st.com" H 3240 7440 50  0001 L CNN "Component Link 1 URL"
+F 6 "14/07/2008" H 3240 7540 50  0001 L CNN "Datasheet Version"
+F 7 "3-Pin SOT-89 Package 1.5 mm Pitch, 4.1 mm Lead Span" H 3240 7640 50  0001 L CNN "Package Description"
+F 8 "2011" H 3240 7740 50  0001 L CNN "Package Version"
+F 9 "IC" H 3240 7840 50  0001 L CNN "category"
+F 10 "1494329" H 3240 7940 50  0001 L CNN "ciiva ids"
+F 11 "d1c0b55dda225a7b" H 3240 8040 50  0001 L CNN "library id"
+F 12 "STMicroelectronics" H 3240 8140 50  0001 L CNN "manufacturer"
+F 13 "SOT-89" H 3240 8240 50  0001 L CNN "package"
+F 14 "1329864162" H 3240 8340 50  0001 L CNN "release date"
+F 15 "AFF25B12-956B-42DB-B299-4B91BC383A72" H 3240 8440 50  0001 L CNN "vault revision"
+F 16 "yes" H 3240 8540 50  0001 L CNN "imported"
+	1    3240 6740
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

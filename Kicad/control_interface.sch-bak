@@ -16,48 +16,48 @@ $EndDescr
 $Comp
 L eurorack_custom:ul_TLC59281DBQ_TLC59281DBQ U?
 U 1 1 5FE6AA44
-P 1430 3530
+P 5830 4160
 AR Path="/5FB96D72/5FE6AA44" Ref="U?"  Part="1" 
 AR Path="/5FC5188F/5FE6AA44" Ref="U?"  Part="1" 
 AR Path="/5FE50EBA/5FE6AA44" Ref="U?"  Part="1" 
-F 0 "U?" H 2630 3917 60  0000 C CNN
-F 1 "TLC59281DBQ" H 2630 3811 60  0000 C CNN
-F 2 "Package_DFN_QFN:VQFN-24-1EP_4x4mm_P0.5mm_EP2.45x2.45mm" H 2630 3770 60  0001 C CNN
-F 3 "" H 1430 3530 60  0000 C CNN
-	1    1430 3530
+F 0 "U?" H 7030 4547 60  0000 C CNN
+F 1 "TLC59281DBQ" H 7030 4441 60  0000 C CNN
+F 2 "Package_DFN_QFN:VQFN-24-1EP_4x4mm_P0.5mm_EP2.45x2.45mm" H 7030 4400 60  0001 C CNN
+F 3 "" H 5830 4160 60  0000 C CNN
+	1    5830 4160
 	1    0    0    -1  
 $EndComp
-Text GLabel 1430 3930 0    50   Input ~ 0
+Text GLabel 5830 4560 0    50   Input ~ 0
 LED_0_0
-Text GLabel 1430 4030 0    50   Input ~ 0
+Text GLabel 5830 4660 0    50   Input ~ 0
 LED_0_1
-Text GLabel 1430 4130 0    50   Input ~ 0
+Text GLabel 5830 4760 0    50   Input ~ 0
 LED_1_0
-Text GLabel 1430 4230 0    50   Input ~ 0
+Text GLabel 5830 4860 0    50   Input ~ 0
 LED_1_1
-Text GLabel 1430 4330 0    50   Input ~ 0
+Text GLabel 5830 4960 0    50   Input ~ 0
 LED_2_0
-Text GLabel 1430 4430 0    50   Input ~ 0
+Text GLabel 5830 5060 0    50   Input ~ 0
 LED_2_1
-Text GLabel 1430 4530 0    50   Input ~ 0
+Text GLabel 5830 5160 0    50   Input ~ 0
 LED_3_0
-Text GLabel 1430 4630 0    50   Input ~ 0
+Text GLabel 5830 5260 0    50   Input ~ 0
 LED_3_1
-Text GLabel 3830 3930 2    50   Input ~ 0
+Text GLabel 8230 4560 2    50   Input ~ 0
 LED_7_1
-Text GLabel 3830 4030 2    50   Input ~ 0
+Text GLabel 8230 4660 2    50   Input ~ 0
 LED_7_0
-Text GLabel 3830 4130 2    50   Input ~ 0
+Text GLabel 8230 4760 2    50   Input ~ 0
 LED_6_1
-Text GLabel 3830 4230 2    50   Input ~ 0
+Text GLabel 8230 4860 2    50   Input ~ 0
 LED_6_0
-Text GLabel 3830 4330 2    50   Input ~ 0
+Text GLabel 8230 4960 2    50   Input ~ 0
 LED_5_1
-Text GLabel 3830 4430 2    50   Input ~ 0
+Text GLabel 8230 5060 2    50   Input ~ 0
 LED_5_0
-Text GLabel 3830 4530 2    50   Input ~ 0
+Text GLabel 8230 5160 2    50   Input ~ 0
 LED_4_1
-Text GLabel 3830 4630 2    50   Input ~ 0
+Text GLabel 8230 5260 2    50   Input ~ 0
 LED_4_0
 $Comp
 L eurocad:SN74HC165 J?
@@ -165,27 +165,27 @@ $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 5FE6AA92
-P 3830 3530
+P 8230 4160
 AR Path="/5FC5188F/5FE6AA92" Ref="#PWR?"  Part="1" 
 AR Path="/5FE50EBA/5FE6AA92" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3830 3380 50  0001 C CNN
-F 1 "+5V" H 3845 3703 50  0000 C CNN
-F 2 "" H 3830 3530 50  0001 C CNN
-F 3 "" H 3830 3530 50  0001 C CNN
-	1    3830 3530
+F 0 "#PWR?" H 8230 4010 50  0001 C CNN
+F 1 "+5V" H 8245 4333 50  0000 C CNN
+F 2 "" H 8230 4160 50  0001 C CNN
+F 3 "" H 8230 4160 50  0001 C CNN
+	1    8230 4160
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5FE6AA98
-P 1430 3530
+P 5830 4160
 AR Path="/5FC5188F/5FE6AA98" Ref="#PWR?"  Part="1" 
 AR Path="/5FE50EBA/5FE6AA98" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 1430 3280 50  0001 C CNN
-F 1 "GND" V 1435 3402 50  0000 R CNN
-F 2 "" H 1430 3530 50  0001 C CNN
-F 3 "" H 1430 3530 50  0001 C CNN
-	1    1430 3530
+F 0 "#PWR?" H 5830 3910 50  0001 C CNN
+F 1 "GND" V 5835 4032 50  0000 R CNN
+F 2 "" H 5830 4160 50  0001 C CNN
+F 3 "" H 5830 4160 50  0001 C CNN
+	1    5830 4160
 	0    1    1    0   
 $EndComp
 $Comp
@@ -339,4 +339,15 @@ Wire Notes Line
 	830  840  7010 840 
 Wire Notes Line
 	830  2320 7010 2320
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 5FE8B2B8
+P 2420 3850
+F 0 "FB?" V 2199 3850 50  0000 C CNN
+F 1 "100MHz 1000Ohm 300mA" V 2282 3850 39  0000 C CNN
+F 2 "" V 2350 3850 50  0001 C CNN
+F 3 "~" H 2420 3850 50  0001 C CNN
+	1    2420 3850
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

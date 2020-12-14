@@ -333,10 +333,10 @@ Wire Wire Line
 	810  6430 1710 6430
 Connection ~ 1710 6430
 $Comp
-L MCU_ST_STM32F4:STM32F401RBTx U?
+L MCU_ST_STM32F4:STM32F401RBTx U1
 U 1 1 5FCBFD96
 P 6160 3220
-F 0 "U?" H 6620 5010 50  0000 C CNN
+F 0 "U1" H 6620 5010 50  0000 C CNN
 F 1 "STM32F401RBT6" H 6790 4920 50  0000 C CNN
 F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5560 1520 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00086815.pdf" H 6160 3220 50  0001 C CNN
@@ -947,42 +947,231 @@ $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5FFC75D4
-P 4710 1840
-F 0 "C?" H 4590 1930 50  0000 L CNN
-F 1 "0.1uF" H 4540 1770 39  0000 L CNN
-F 2 "" H 4710 1840 50  0001 C CNN
-F 3 "~" H 4710 1840 50  0001 C CNN
-	1    4710 1840
+P 1580 4750
+F 0 "C?" H 1460 4840 50  0000 L CNN
+F 1 "0.1uF" H 1410 4680 39  0000 L CNN
+F 2 "" H 1580 4750 50  0001 C CNN
+F 3 "~" H 1580 4750 50  0001 C CNN
+	1    1580 4750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4710 1740 4710 1720
-Wire Wire Line
-	4710 1720 5460 1720
 $Comp
 L power:GND #PWR?
 U 1 1 5FFCDE46
-P 4710 2040
-F 0 "#PWR?" H 4710 1790 50  0001 C CNN
-F 1 "GND" H 4715 1867 50  0000 C CNN
-F 2 "" H 4710 2040 50  0001 C CNN
-F 3 "" H 4710 2040 50  0001 C CNN
-	1    4710 2040
+P 1580 4950
+F 0 "#PWR?" H 1580 4700 50  0001 C CNN
+F 1 "GND" H 1585 4777 50  0000 C CNN
+F 2 "" H 1580 4950 50  0001 C CNN
+F 3 "" H 1580 4950 50  0001 C CNN
+	1    1580 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4710 1940 4710 1990
-Wire Wire Line
 	5460 1920 5400 1920
-Wire Wire Line
-	5400 1920 5400 1990
-Wire Wire Line
-	5400 1990 4710 1990
-Connection ~ 4710 1990
-Wire Wire Line
-	4710 1990 4710 2040
 Text GLabel 5460 2820 0    50   Input ~ 0
 HSE_IN
 Text GLabel 5460 2920 0    50   Input ~ 0
 HSE_OUT
+$Comp
+L Device:Crystal_GND24_Small HSE
+U 1 1 600234EF
+P 1790 2730
+F 0 "HSE" H 1620 3090 50  0000 L CNN
+F 1 "8MHz" H 1640 3020 50  0000 L CNN
+F 2 "" H 1790 2730 50  0001 C CNN
+F 3 "~" H 1790 2730 50  0001 C CNN
+	1    1790 2730
+	1    0    0    -1  
+$EndComp
+Text GLabel 1410 2730 0    50   Input ~ 0
+HSE_IN
+Text GLabel 2380 2730 2    50   Input ~ 0
+HSE_OUT
+Wire Wire Line
+	1410 2730 1570 2730
+$Comp
+L power:GND #PWR?
+U 1 1 6003C349
+P 1790 3070
+F 0 "#PWR?" H 1790 2820 50  0001 C CNN
+F 1 "GND" H 1795 2897 50  0000 C CNN
+F 2 "" H 1790 3070 50  0001 C CNN
+F 3 "" H 1790 3070 50  0001 C CNN
+	1    1790 3070
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1790 2830 1790 3010
+$Comp
+L Device:R_Small R?
+U 1 1 60063A29
+P 2200 2730
+F 0 "R?" V 2040 2710 50  0000 C CNN
+F 1 "100" V 2110 2730 50  0000 C CNN
+F 2 "" H 2200 2730 50  0001 C CNN
+F 3 "~" H 2200 2730 50  0001 C CNN
+	1    2200 2730
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1890 2730 2000 2730
+Wire Wire Line
+	2300 2730 2380 2730
+$Comp
+L Device:C_Small C?
+U 1 1 6007193C
+P 1570 2880
+F 0 "C?" H 1380 2920 50  0000 L CNN
+F 1 "28pF" H 1320 2810 50  0000 L CNN
+F 2 "" H 1570 2880 50  0001 C CNN
+F 3 "~" H 1570 2880 50  0001 C CNN
+	1    1570 2880
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1570 2780 1570 2730
+Connection ~ 1570 2730
+Wire Wire Line
+	1570 2730 1690 2730
+Wire Wire Line
+	1570 2980 1570 3010
+Wire Wire Line
+	1570 3010 1790 3010
+Connection ~ 1790 3010
+Wire Wire Line
+	1790 3010 1790 3070
+$Comp
+L Device:C_Small C?
+U 1 1 60099F46
+P 2000 2880
+F 0 "C?" H 2110 2880 50  0000 L CNN
+F 1 "28pF" H 2050 2790 50  0000 L CNN
+F 2 "" H 2000 2880 50  0001 C CNN
+F 3 "~" H 2000 2880 50  0001 C CNN
+	1    2000 2880
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2780 2000 2730
+Connection ~ 2000 2730
+Wire Wire Line
+	2000 2730 2100 2730
+Wire Wire Line
+	2000 2980 2000 3010
+Wire Wire Line
+	2000 3010 1790 3010
+Wire Wire Line
+	1790 2630 1790 2530
+Wire Wire Line
+	1790 2530 1000 2530
+Wire Wire Line
+	1000 2530 1000 3010
+Wire Wire Line
+	1000 3010 1570 3010
+Connection ~ 1570 3010
+Text Notes 940  3600 0    50   ~ 0
+Cl = 2 * (Ccrystal - Cparasitic)\nCparasitic = capacitance of PCB, usually 2-4pF\nCl = 2 * (18 - 4) = 28pF
+Wire Wire Line
+	1580 4850 1580 4950
+Text GLabel 5400 1920 0    50   Input ~ 0
+BOOT0
+Text GLabel 1160 4580 1    50   Input ~ 0
+BOOT0
+$Comp
+L Device:R_Small R?
+U 1 1 600C4176
+P 1160 4770
+F 0 "R?" V 1000 4750 50  0000 C CNN
+F 1 "10k" V 1070 4770 50  0000 C CNN
+F 2 "" H 1160 4770 50  0001 C CNN
+F 3 "~" H 1160 4770 50  0001 C CNN
+	1    1160 4770
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 600C49A5
+P 1160 4950
+F 0 "#PWR?" H 1160 4700 50  0001 C CNN
+F 1 "GND" H 1165 4777 50  0000 C CNN
+F 2 "" H 1160 4950 50  0001 C CNN
+F 3 "" H 1160 4950 50  0001 C CNN
+	1    1160 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1160 4950 1160 4870
+Wire Wire Line
+	1160 4670 1160 4580
+Text Notes 700  4670 0    50   ~ 0
+add switch
+Text GLabel 7860 2790 0    50   Input ~ 0
+SWDIO
+Text GLabel 7870 2930 0    50   Input ~ 0
+SWCLK
+Text GLabel 7870 3100 0    50   Input ~ 0
+SWO
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J?
+U 1 1 600D5646
+P 2830 4590
+F 0 "J?" H 2880 5007 50  0000 C CNN
+F 1 "SWD" H 2880 4916 50  0000 C CNN
+F 2 "" H 2830 4590 50  0001 C CNN
+F 3 "~" H 2830 4590 50  0001 C CNN
+	1    2830 4590
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 600D6096
+P 2630 4390
+F 0 "#PWR?" H 2630 4240 50  0001 C CNN
+F 1 "+3.3V" V 2645 4518 50  0000 L CNN
+F 2 "" H 2630 4390 50  0001 C CNN
+F 3 "" H 2630 4390 50  0001 C CNN
+	1    2630 4390
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 600D6D9F
+P 2530 4870
+F 0 "#PWR?" H 2530 4620 50  0001 C CNN
+F 1 "GND" H 2535 4697 50  0000 C CNN
+F 2 "" H 2530 4870 50  0001 C CNN
+F 3 "" H 2530 4870 50  0001 C CNN
+	1    2530 4870
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2630 4490 2530 4490
+Wire Wire Line
+	2530 4490 2530 4590
+Wire Wire Line
+	2630 4590 2530 4590
+Connection ~ 2530 4590
+Wire Wire Line
+	2530 4590 2530 4790
+Wire Wire Line
+	2630 4790 2530 4790
+Connection ~ 2530 4790
+Wire Wire Line
+	2530 4790 2530 4870
+NoConn ~ 2630 4690
+NoConn ~ 3130 4690
+Text GLabel 3130 4390 2    50   Input ~ 0
+SWDIO
+Text GLabel 3130 4490 2    50   Input ~ 0
+SWCLK
+Text GLabel 5460 1720 0    50   Input ~ 0
+NRST
+Text GLabel 1580 4530 1    50   Input ~ 0
+NRST
+Wire Wire Line
+	1580 4530 1580 4650
+Text GLabel 3130 4790 2    50   Input ~ 0
+NRST
+Text GLabel 3130 4590 2    50   Input ~ 0
+SWO
 $EndSCHEMATC
